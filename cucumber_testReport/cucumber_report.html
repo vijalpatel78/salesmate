@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading a {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+.arguments {
+    margin-left: 30px;
+    margin-top: 1em;
+    margin-bottom: 15px;
+}
+
+#directory {
+    background-color: #f0f0f0;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.show-modal:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -4px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
+}
+
+.feature-passed {
+    display: block;
+}
+
+.feature-failed{
+    display: block;
+}
+
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        
+          <a class="navbar-brand">Functional Test</a>
+          <div class="project-name visible-md visible-lg">Salesmate</div>
+          <div class="label-container">
+            <span class="label label-success" title="scenarios Passed: 10">Passed: 10</span>
+            <span class="label label-danger" title="scenarios Failed: 0">Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Thu Jun 30 2022 17:18:32 GMT+0530 (India Standard Time)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#metadataInfo">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="metadataInfo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+        <div class="all-features">
+            
+
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@regression_test_login</span>
+                         <span class="tag">@regression_test</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature_alesmatee07ee2b6-bd8e-4cea-8376-0c9667efbd37">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>Login
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="5 Scenarios Passed">5</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature_alesmatee07ee2b6-bd8e-4cea-8376-0c9667efbd37" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    The user can access Salesmate by doing login with a valid credentials</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate6cf909d1-332c-4c83-b4cc-4f9331966dff">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow login when credentials are invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate6cf909d1-332c-4c83-b4cc-4f9331966dff"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               3s 873ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               272ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;1&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               197ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 88ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;Email is required&#39; message on the &#39;Salesmate_Login&#39; page for &#39;No Email&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               48ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate885da02c-8a24-4bf6-8457-306e901a5db1">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow login when credentials are invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate885da02c-8a24-4bf6-8457-306e901a5db1"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               59ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;vijal.patel123456@gmail.com&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               107ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               82ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 49ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;Password is required&#39; message on the &#39;Salesmate_Login&#39; page for &#39;No Password&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               37ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate521cb25d-49c5-4557-8cd4-2c20fcc65879">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow login when credentials are invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate521cb25d-49c5-4557-8cd4-2c20fcc65879"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               48ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;ruhi.shah@yopmail.com&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               646ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;ruhi123$&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               72ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 53ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;Email or password seems to be wrong, please try again with valid credentials.&#39; message on the &#39;Salesmate_Login&#39; page for &#39;Invalid Credentials&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               3s 159ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate2ae06972-9b8c-4fba-ab07-6637f7f4da4a">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow login when credentials are invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate2ae06972-9b8c-4fba-ab07-6637f7f4da4a"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               136ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;xxxx@xx&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               686ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;1&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               210ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 48ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;Email is invalid&#39; message on the &#39;Salesmate_Login&#39; page for &#39;Invalid Email Format&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               95ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmatee7f867f0-97a2-45e0-bc53-891826c20c86">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>It should allow login when credentials are valid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmatee7f867f0-97a2-45e0-bc53-891826c20c86"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               98ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;validEmail&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               426ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;validPassword&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               172ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 78ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the user should get login into the Salesmate</span>
+                            
+                          
+                              <span class="step-duration">
+                               7s 510ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@regression_test_login</span>
+                         <span class="tag">@regression_test</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature_alesmated5e50b0f-5c38-4789-b284-fee92f890dad">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>If the user gets forgot his Salesmate password, then he can set a new Salesmate password
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="3 Scenarios Passed">3</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature_alesmated5e50b0f-5c38-4789-b284-fee92f890dad" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">  by entering a valid email address</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate3828693a-abe4-45cf-bd48-4248e263af4a">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow to do forgot password when an email address is invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate3828693a-abe4-45cf-bd48-4248e263af4a"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on forgot password page</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 915ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;xyz@yop&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               308ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Reset My Password button</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 121ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;Please enter valid email address&#39; message on the &#39;Salesmate_Forgot_Password&#39; page for &#39;Invalid Email Format&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               146ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate48cd916a-358d-41f7-9deb-843f38132ad3">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not allow to do forgot password when an email address is invalid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate48cd916a-358d-41f7-9deb-843f38132ad3"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on forgot password page</span>
+                            
+                          
+                              <span class="step-duration">
+                               66ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;vijal.patel@gmail.com&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               459ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Reset My Password button</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 122ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system should give &#39;No such user found&#39; message on the &#39;Salesmate_Forgot_Password&#39; page for &#39;Invalid User&#39; case</span>
+                            
+                          
+                              <span class="step-duration">
+                               115ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate8d8a4adc-980c-44b6-922c-033905a1f0ad">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>It should allow to do forgot password when an email address is valid
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate8d8a4adc-980c-44b6-922c-033905a1f0ad"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on forgot password page</span>
+                            
+                          
+                              <span class="step-duration">
+                               70ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;validEmail&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               900ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Reset My Password button</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 36ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> an email to reset password should be sent on an entered email address</span>
+                            
+                          
+                              <span class="step-duration">
+                               234ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@regression_test_login</span>
+                         <span class="tag">@regression_test</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature_alesmatee59637f5-21e6-469f-bf79-09af0f19cfd7">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>Remember Salesmate Login Credentials
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="2 Scenarios Passed">2</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature_alesmatee59637f5-21e6-469f-bf79-09af0f19cfd7" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    Instead of entering Salesmate login credentials again and again, the user can keep last<br/>    entered Salesmate login credentials as saved when he will visit the Salesmate again</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate7854b6b1-1a73-4330-8df1-9633128208d2">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should remember last login credentials when 'Remember Me' checkbox is checked
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="6 Steps Passed">6</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate7854b6b1-1a73-4330-8df1-9633128208d2"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 394ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;new.user@yopmail.com&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               356ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;1&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               252ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> &#39;check&#39; Remember Me checkbox</span>
+                            
+                          
+                              <span class="step-duration">
+                               301ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 199ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system &#39;should&#39; remember last login &#39;new.user@yopmail.com&#39; and &#39;1&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               3s 277ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario_alesmate902c75bf-1be5-4188-9117-52be7dad5bb0">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario Outline:</b>It should not remember last login credentials when 'Remember Me' checkbox is unchecked
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="6 Steps Passed">6</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario_alesmate902c75bf-1be5-4188-9117-52be7dad5bb0"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> the user is on Salesmate login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               113ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> the user enter Email:&#39;gautam.patel@yopmail.com&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               1s 516ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> enter Password:&#39;Gautam@123&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               198ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> &#39;uncheck&#39; Remember Me checkbox</span>
+                            
+                          
+                              <span class="step-duration">
+                               195ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> click on the Login button</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 172ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the system &#39;should not&#39; remember last login &#39;gautam.patel@yopmail.com&#39; and &#39;Gautam@123&#39;</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 941ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+            
+    </div>
+
+    </div>
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 0,
+                                                            "passed" : 3,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 0,
+                                                            "passed" : 10,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+});
+
+function toggle(className) {
+  var x = $(className);
+  if ( x.css('display') === "none") {
+    x.css('display', 'block');
+  } else {
+    x.css('display', 'none');
+  }
+}
+
+      function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Cucumber Results'],
+        ['Passed', chartData.passed],
+        ['Failed', chartData.failed],
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
+    ]);
+
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var title;
+
+    if (total === 1) {
+        title = total + ' ' + chartData.title.slice(0, -1)
+    } else {
+        title = total + ' ' + chartData.title;
+    }
+
+    var options = {
+        width: '100%',
+        height: 240,
+        title: title,
+        is3D: true,
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        fontSize: '13',
+        fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
+        slices: {
+            1: {offset: 0.4},
+            2: {offset: 0.4},
+            3: {offset: 0.4},
+            4: {offset: 0.4},
+            5: {offset: 0.4},
+            6: {offset: 0.4}
+        },
+        titleTextStyle: {
+            fontSize: '13',
+            color: '#5e5e5e'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+
+    function selectHandler() {
+      var selectedItem = chart.getSelection()[0];
+      if (selectedItem) {
+        var featureStatus = data.getValue(selectedItem.row, 0);
+        if (featureStatus === 'Passed'){
+            var x = $('.feature-passed');
+        }else{
+            var x = $('.feature-failed');
+        }
+        if (x && x.css('display') === "none") {
+          x.css('display', 'block');
+        } else {
+          x.css('display', 'none');
+        }
+      }
+    }
+    google.visualization.events.addListener(chart, 'select', selectHandler);
+
+    chart.draw(data, options);
+}
+
+      $('a.toggle').on('click', function(e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('collapse')) {
+        if ($(this).text() === 'Screenshot -') {
+            // $(this).text('Screenshot +');
+            $(this).next('a.screenshot').find('img').hide();
+        } else if($(this).text() === 'Screenshot +') {
+            // $(this).text('Screenshot -');
+            $(this).next('a.screenshot').find('img').show();
+        }
+    }
+
+    if ($(this).text().includes(' -')) {
+        $(this).text($(this).text().replace(' -', ' +'));
+    } else {
+        $(this).text($(this).text().replace(' +', ' -'));
+    }
+});
+
+    </script>
+  </body>
+</html>

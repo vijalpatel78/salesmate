@@ -1,0 +1,8 @@
+####### Deal Module ########
+
+****** Pre Configuration *******
+=> Firstly there should be exist atleast one deal before execution
+
+##### Tag Names For Execution ######
+=> To execute all modules/project at once => @regression_test
+=> To execute the whole deal module => @regression_test_deal

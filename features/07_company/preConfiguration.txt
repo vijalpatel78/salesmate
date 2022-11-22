@@ -1,0 +1,8 @@
+####### Company Module ########
+
+****** Pre Configuration *******
+=> Firstly there should be exist atleast one company before execution
+
+##### Tag Names For Execution ######
+=> To execute all modules/project at once => @regression_test
+=> To execute the whole company module => @regression_test_company

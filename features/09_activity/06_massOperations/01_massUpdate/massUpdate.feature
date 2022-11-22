@@ -1,0 +1,69 @@
+@regression_test_company @regression_test
+Feature: Company Module > Mass Operations > Mass Update
+
+  Description: In this feature user is able to enable/disable mass update activity rights and manage mass update
+               operations
+
+  Background:
+    Given 'User1' is on the activity listing page
+
+#------------------------ Case:1 (http://testrails.rapidops.com/index.php?/cases/view/C21096) --------------------------
+
+  Scenario: As a User, Verify that User can't able to see the Update options on the bulk operation when the user doesn't have a right to Mass Update Company
+    When verifying 'User2' when rights are disabled for right name of '304' through 'User1'
+    Then user is on activity listing page
+    Then 'Mass Update Activities' link is not visible and log in through 'User1'
+
+#------------------------ Case:2 (http://testrails.rapidops.com/index.php?/cases/view/C21097) --------------------------
+
+  Scenario: As a user, I should able to see the 'Mass Update' option when user has 'Mass Update Company' right
+    When verifying 'User2' when rights are enabled for right name of '304' through 'User1'
+    Then user is on activity listing page
+    Then 'Mass Update Activities' link is visible and log in through 'User1'
+
+#------------------------ Case:3 (http://testrails.rapidops.com/index.php?/cases/view/C21098) --------------------------
+
+  Scenario: As a user, I should be able to update Contacts in bulk from the mass update Company page
+    When user is able to update Companies in bulk from the mass update Companies page
+      | Select Field01  | Availability             | Bangalore                |
+      | Select Field02  | Big Integer Field        | 546774                   |
+      | Select Field03  | Boolean Field            | Yes                      |
+      | Select Field04  | Company                  | MindBoard                |
+      | Select Field05  | Completed                | Yes                      |
+      | Select Field06  | Contact                  | INR - ₹                  |
+      | Select Field07  | Date Field               | Jan 13, 2021             |
+      | Select Field08  | Date Time Field          | Apr 24, 2021 07:33 PM    |
+      | Select Field09  | Decimal Field            | 7777                     |
+      | Select Field10  | Description              | Personal Contact Details |
+      | Select Field11  | Duration                 | No                       |
+      | Select Field12  | End Date                 | Feb 11, 2022 06:59 PM    |
+      | Select Field13  | Integer Field            | 370                      |
+      | Select Field14  | Internal Note            | Data Scientist           |
+      | Select Field15  | Location                 | Santhosh                 |
+      | Select Field16  | Multi Select Field       | M2                       |
+      | Select Field17  | Owner                    | Vijal Patel              |
+      | Select Field18  | Percentage Field         | 95                       |
+      | Select Field19  | Select Field             | S3                       |
+      | Select Field20  | Start Date               | Kalambakkam              |
+      | Select Field21  | Tags                     | Support                  |
+      | Select Field21  | Text Area Field          | Contact Details          |
+      | Select Field22  | Text Field               | Imported Contact         |
+      | Select Field23  | Title                    | Asia/Kolkata             |
+      | Select Field24  | Type                     | Customer                 |
+      | Select Field25  | URL Field                | www.support.com          |
+      | Select Field26  | Video Conferencing       | 540987                   |
+
+#------------------------ Case:4 (http://testrails.rapidops.com/index.php?/cases/view/C21099) --------------------------
+
+  Scenario: As a User, Verify I should be able to display update button disable if I haven't checked any checkbox
+    When user is able to display 'Update' button disable if I have not checked any checkbox under 'Mass Update Activities' of 'icon-ic_activity' module
+
+#------------------------ Case:5 (http://testrails.rapidops.com/index.php?/cases/view/C21100) --------------------------
+
+  Scenario: As a User, Verify upon clicking on cancel button it should terminate update process
+    When user upon clicking on cancel button it should terminate update process under 'Mass Update Activities'
+
+#------------------------ Case:6 (http://testrails.rapidops.com/index.php?/cases/view/C21101) --------------------------
+
+  Scenario: As a User, the system should give me a validation message when any criteria are not selected
+    When system should give validation 'Select Search Criteria' when any criteria not selected under 'Mass Update Activities'
