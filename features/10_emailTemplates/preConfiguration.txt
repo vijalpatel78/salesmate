@@ -1,5 +1,0 @@
-####### Email Templates Module ########
-
-##### Tag Names For Execution ######
-=> To execute all modules/project at once => @regression_test
-=> To execute the whole product module => @regression_test_emailTemplates

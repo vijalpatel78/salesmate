@@ -1,7 +1,0 @@
-######### Sign up Module ###########
-
-=> Firstly should create new user with unique credentials and then execute script with that credentials
-=> Change those newly added user credentials dynamically over feature file
-
-##### Tag Name For Execution ######
-=> To execute the whole signup module => @regression_test_signup

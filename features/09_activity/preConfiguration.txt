@@ -1,8 +1,0 @@
-####### Activity Module ########
-
-****** Pre Configuration *******
-=> Firstly there should be exist atleast one activity before execution
-
-##### Tag Names For Execution ######
-=> To execute all modules/project at once => @regression_test
-=> To execute the whole activity module => @regression_test_activity
