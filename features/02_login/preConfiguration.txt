@@ -1,7 +1,0 @@
-######### Login Module ###########
-
-=> Firstly should exist atleast one valid user credentials and then execute script with valid and invalid credentials
-
-##### Tag Name For Execution ######
-=> To execute all modules/project at once => @regression_test
-=> To execute the whole signup module => @regression_test_login

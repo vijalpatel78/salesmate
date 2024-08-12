@@ -1,5 +1,0 @@
-######### myAccount Module ###########
-
-##### Tag Name For Execution ######
-=> To execute all modules/project at once => @regression_test
-=> To execute the whole my account module => @regression_test_myAccount
