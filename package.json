@@ -1,13 +1,23 @@
 {
-  "name": "vc_ecom_playwright",
+  "name": "salesmateproject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijalpatel78/salesmate.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijalpatel78/salesmate/issues"
+  },
+  "homepage": "https://github.com/vijalpatel78/salesmate#readme",
   "devDependencies": {
-    "@playwright/test": "^1.35.1"
+    "@cucumber/cucumber": "^8.8.0"
   }
 }
